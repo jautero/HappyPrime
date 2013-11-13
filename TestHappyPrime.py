@@ -16,6 +16,14 @@
 import unittest
 import HappyPrime
 
+def sumSquareDigits(number):
+    sum=0
+    while number > 1:
+        digit=number % 10
+        sum+=digit*digit
+        number/=10
+    return sum
+
 class HappyPrimeTest(unittest.TestCase):
     """Test generating happy primes"""
     def test_getNextHappyPrime(self):
@@ -26,6 +34,7 @@ class HappyTest(unittest.TestCase):
     """Test happiness"""
     def test_isHappy(self):
         self.assert_(HappyPrime.isHappy(313), 'isHappy() thinks that 313 is not happy')
+        self.assert_(HappyPrime.isHappy(sumSquareDigits(313)), 'isHappy() thinks %d is not happy' % sumSquareDigits(313))
         
 if __name__ == '__main__':
     unittest.main()
