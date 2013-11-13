@@ -17,8 +17,6 @@ def sumSquareDigits(number):
     return sum
 
 def getNextHappyPrime(happy_prime):
-    if not isHappy(happy_prime) or not isPrime(happy_prime):
-        raise AttributeError("Argument '%d' is not happy or prime" % happy_prime)
     number=nextPrime(happy_prime)
     while not isHappy(number):
         number=nextPrime(number)
@@ -56,6 +54,7 @@ def nextPrime(number):
     while not isPrime(number):
         number+=1
     return number
- if __name__ == '__main__':
-     import sys
-     print getNextHappyPrime(int(sys.argv[1]))
+
+if __name__ == '__main__':
+    import sys
+    print getNextHappyPrime(int(sys.argv[1]))
