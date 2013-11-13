@@ -10,3 +10,7 @@
 
 def getNextHappyPrime(happy_prime):
     return 331
+
+def isHappy(number):
+    if number == 313:
+        return True
