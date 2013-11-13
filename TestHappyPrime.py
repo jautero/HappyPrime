@@ -22,5 +22,10 @@ class HappyPrimeTest(unittest.TestCase):
         self.assert_(HappyPrime.getNextHappyPrime(313)==331,
         'next happy prime after 313 was %d, not 331' % HappyPrime.getNextHappyPrime(313))
         
+class HappyTest(unittest.TestCase):
+    """Test happiness"""
+    def test_isHappy(self):
+        self.assert_(HappyPrime.isHappy(313), 'isHappy() thinks that 313 is not happy')
+        
 if __name__ == '__main__':
     unittest.main()
