@@ -8,9 +8,19 @@
 #  Copyright 2013 Juha Autero. All rights reserved.
 # 
 
+def sumSquareDigits(number):
+    sum=0
+    while number > 0:
+        digit=number % 10
+        sum+=digit*digit
+        number/=10
+    return sum
+
 def getNextHappyPrime(happy_prime):
     return 331
 
 def isHappy(number):
-    if number == 313:
+    if number == 1:
         return True
+    else:
+        return isHappy(sumSquareDigits(number))
