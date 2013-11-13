@@ -27,6 +27,12 @@ class HappyTest(unittest.TestCase):
     def test_isHappy(self):
         self.assert_(HappyPrime.isHappy(HappyPrime.sumSquareDigits(313)), 'isHappy() thinks %d is not happy' % HappyPrime.sumSquareDigits(313))
         self.assert_(HappyPrime.isHappy(313), 'isHappy() thinks that 313 is not happy')
-        
+
+class PrimeTest(unittest.TestCase):
+    """Test primeness"""
+    def test_isPrime(self):
+        self.assert_(HappyPrime.isPrime(313), 'isPrime() thinks 313 is not prime')
+
+
 if __name__ == '__main__':
     unittest.main()
