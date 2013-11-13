@@ -19,8 +19,10 @@ import HappyPrime
 class HappyPrimeTest(unittest.TestCase):
     """Test generating happy primes"""
     def test_getNextHappyPrime(self):
-        self.assert_(HappyPrime.getNextHappyPrime(313)==331,
-        'next happy prime after 313 was %d, not 331' % HappyPrime.getNextHappyPrime(313))
+        happyprimes=[313,331,367,379]
+        for c,n in zip(happyprimes[:-1],happyprimes[1:]):
+            self.assert_(HappyPrime.getNextHappyPrime(c)==n,
+        'getNextHappyPrime() thinks that next happy prime after %d is %d, not %d' % (c,HappyPrime.getNextHappyPrime(c),n))
         
 class HappyTest(unittest.TestCase):
     """Test happiness"""
