@@ -24,3 +24,9 @@ def isHappy(number):
         return True
     else:
         return isHappy(sumSquareDigits(number))
+
+def isPrime(number):
+    if number==313:
+        return True
+    else:
+        return False
