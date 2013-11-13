@@ -36,3 +36,10 @@ def isPrime(number):
             return False
         divisor+=2
     return True
+
+def nextPrime(number):
+    number+=1
+    while not isPrime(number):
+        number+=1
+    return number
+

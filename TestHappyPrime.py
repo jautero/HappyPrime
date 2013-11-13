@@ -33,12 +33,12 @@ class PrimeTest(unittest.TestCase):
     def test_isPrime(self):
         self.assert_(HappyPrime.isPrime(313), 'isPrime() thinks 313 is not prime')
         # Some known primes (primes smaller than 20)
-        for prime in [2,3,5,7,13,17,19]:
+        for prime in [2,3,5,7,11,13,17,19]:
             self.assert_(HappyPrime.isPrime(prime), 'isPrime() thinks %d is not prime' % prime)
     def test_nextPrime(self):
-        primes=[2,3,5,7,13,17,19]
+        primes=[2,3,5,7,11,13,17,19]
         for c,n in zip(primes[:-1],primes[1:]):
-            self.assert_(HappyPrime.nextPrime(c)==n, 'nextPrime() thinks that next prime after %d is %d' % (c,n))
+            self.assert_(HappyPrime.nextPrime(c)==n, 'nextPrime() thinks that next prime after %d is not %d' % (c,n))
 
 if __name__ == '__main__':
     unittest.main()
