@@ -26,7 +26,13 @@ def isHappy(number):
         return isHappy(sumSquareDigits(number))
 
 def isPrime(number):
-    if number==313:
+    if number == 2:
         return True
-    else:
+    if number % 2 == 0:
         return False
+    divisor=3
+    while divisor*divisor<=number:
+        if number % divisor == 0:
+            return False
+        divisor+=2
+    return True
