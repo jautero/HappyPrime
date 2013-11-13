@@ -12,3 +12,15 @@
 # [aside]
 # The Doctor: I dunno, talk about dumbing down. Don't they teach recreational mathematics anymore?
 #
+
+import unittest
+import HappyPrime
+
+class HappyPrimeTest(unittest.TestCase):
+    """Test generating happy primes"""
+    def test_getNextHappyPrime(self):
+        self.assert_(HappyPrime.getNextHappyPrime(313)==331,
+        'next happy prime after 313 was %d, not 331' % HappyPrime.getNextHappyPrime(313))
+        
+if __name__ == '__main__':
+    unittest.main()
